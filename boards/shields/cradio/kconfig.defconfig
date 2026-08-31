@@ -16,6 +16,7 @@ if ZMK_SPLIT_ROLE_CENTRAL
 
 config ZMK_KEYBOARD_NAME
     default "Raii"
-
 endif
 
+config ZMK_SPLIT
+    default y
