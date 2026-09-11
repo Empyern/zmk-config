@@ -5,8 +5,8 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 30// 10
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define BASE  0
@@ -41,20 +41,20 @@
         default_layer {
             display-name = "DEF";
             bindings = <
-&kp B             &kp L        &kp D           &kp W           &kp Z        &kp SINGLE_QUOTE  &kp F  &kp O                &kp U             &kp J
-&kp N             &kp R        &kp T           &kp S           &kp G        &kp Y             &kp H  &kp A                &kp E             &kp I
-&ht LEFT_SHIFT Q  &ht LCTRL X  &ht LEFT_GUI M  &ht LEFT_ALT C  &kp V        &kp K             &kp P  &ht RIGHT_GUI COMMA  &ht RCTRL PERIOD  &ht RIGHT_SHIFT FSLH
-                                               &mo 2           &kp SPACE    &mo 1             &mo 3
+&kp B             &kp L        &kp R           &kp D           &kp M        &kp K  &kp U  &kp I                &kp O             &kp J
+&kp W             &kp N        &kp S           &kp T           &kp G        &kp Y  &kp H  &kp A                &kp E             &kp SEMI
+&ht LEFT_SHIFT Q  &ht LCTRL Z  &ht LEFT_GUI X  &ht LEFT_ALT C  &kp V        &kp P  &kp F  &ht RIGHT_GUI COMMA  &ht RCTRL PERIOD  &ht RIGHT_SHIFT FSLH
+                                               &mo 2           &kp SPACE    &mo 1  &mo 3
             >;
         };
 
         right_layer {
             display-name = "NAV";
             bindings = <
-&mkp MB3  &mkp MB2        &mmv MOVE_UP    &mkp MB1         &msc SCRL_UP       &kp PAGE_UP    &kp PAGE_DOWN    &kp HOME  &kp END     &kp DELETE
-&studio_unlock    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN     &kp LEFT       &kp DOWN         &kp UP    &kp RIGHT   &kp ENTER
-&trans    &kp X           &kp TAB         &msc SCRL_LEFT   &msc SCRL_RIGHT    &kp LS(LC(T))  &kp PRINTSCREEN  &kp TAB   &kp ESCAPE  &tog 1
-                                          &kp LEFT_ALT     &kp BACKSPACE      &trans         &trans
+&mkp MB3        &mkp MB2        &mmv MOVE_UP    &mkp MB1         &msc SCRL_UP       &kp PAGE_UP    &kp PAGE_DOWN    &kp HOME  &kp END     &kp DELETE
+&studio_unlock  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN     &kp LEFT       &kp DOWN         &kp UP    &kp RIGHT   &kp ENTER
+&trans          &kp X           &kp TAB         &msc SCRL_LEFT   &msc SCRL_RIGHT    &kp LS(LC(T))  &kp PRINTSCREEN  &kp TAB   &kp ESCAPE  &tog 1
+                                                &kp LEFT_ALT     &kp BACKSPACE      &trans         &trans
             >;
         };
 
@@ -79,7 +79,7 @@
         };
 
         config_layer {
-            display-name="CONF";
+            display-name = "CONF";
             bindings = <
 &bootloader  &trans  &trans  &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 3  &trans  &trans  &trans  &bootloader
 &trans       &trans  &trans  &trans      &bt BT_SEL 1    &bt BT_SEL 4  &trans  &trans  &trans  &trans
